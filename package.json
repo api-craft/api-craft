@@ -1,6 +1,6 @@
 {
-  "name": "api-craft",
-  "version": "1.0.0",
+  "name": "@tselven/api-craft",
+  "version": "1.0.1",
   "description": "",
   "main": "server.js",
   "scripts": {
@@ -8,6 +8,7 @@
     "dev": "nodemon server.js",
     "start": "node server.js"
   },
+  "type": "module",
   "keywords": [],
   "author": "P.Thamilselven <contact@tselven.com>",
   "publishConfig": {
