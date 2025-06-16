@@ -1,5 +1,14 @@
+# Ignore folders
 .github
 .git
 node_modules
-.env.example
 .vscode
+
+# Ignore files
+.env
+.env.local
+.env.*.local
+pnpm-lock.yaml
+cli.js # Only if you're not exposing CLI directly; otherwise, KEEP it!
+*.log
+.DS_Store
