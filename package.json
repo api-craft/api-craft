@@ -13,7 +13,14 @@
     "start": "node server.js"
   },
   "type": "module",
-  "keywords": [],
+  "keywords": [
+    "express",
+    "API",
+    "mongoose",
+    "backend",
+    "Framework",
+    "auth"
+  ],
   "author": "P.Thamilselven <contact@tselven.com>",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
@@ -33,6 +40,8 @@
     "mongoose": "^8.15.2"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.27.2",
+    "babel-jest": "^30.0.0",
     "cross-env": "^7.0.3",
     "jest": "^30.0.0",
     "nodemon": "^3.1.10",
