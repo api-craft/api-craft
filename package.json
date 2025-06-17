@@ -1,13 +1,14 @@
 {
   "name": "@tselven/api-craft",
   "version": "1.0.2",
-  "description": "",
+  "description": "A Framework for build APIs using Express + Mongoose",
   "main": "server.js",
   "bin": {
     "api-craft": "./bin/api-craft.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "cross-env NODE_ENV=test jest",
+    "test:watch": "cross-env NODE_ENV=test jest --watch",
     "dev": "nodemon server.js",
     "start": "node server.js"
   },
@@ -19,16 +20,27 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tselven/api-craft.git"
+    "url": "git+https://github.com/api-craft/api-craft.git"
   },
-  "license": "ISC",
+  "license": "MIT",
   "packageManager": "pnpm@10.6.3",
   "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.15.2"
   },
   "devDependencies": {
-    "nodemon": "^3.1.10"
+    "cross-env": "^7.0.3",
+    "jest": "^30.0.0",
+    "nodemon": "^3.1.10",
+    "supertest": "^7.1.1"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "bcrypt"
+    ]
   }
 }
