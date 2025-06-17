@@ -3,7 +3,7 @@
 .git
 node_modules
 .vscode
-
+docs
 # Ignore files
 .env
 .env.local
