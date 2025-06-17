@@ -35,6 +35,7 @@ const exclude = [
   '.github',
   '.vscode',
   'bin',
+  'docs',
   '.npmignore',
   'pnpm-lock.yaml',
   'package-lock.json',
