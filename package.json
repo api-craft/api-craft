@@ -9,7 +9,7 @@
   "scripts": {
     "test": "cross-env NODE_ENV=test jest",
     "test:watch": "cross-env NODE_ENV=test jest --watch",
-    "dev": "nodemon server.js",
+    "dev": "nodemon server.js --ext js,yaml",
     "start": "node server.js"
   },
   "type": "module",
@@ -30,14 +30,16 @@
     "url": "git+https://github.com/api-craft/api-craft.git"
   },
   "license": "MIT",
-  "packageManager": "pnpm@10.6.3",
+  "packageManager": "pnpm@10.12.1",
   "dependencies": {
     "bcrypt": "^6.0.0",
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.15.2"
+    "mongoose": "^8.15.2",
+    "swagger-ui-express": "^5.0.1",
+    "yamljs": "^0.3.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.27.2",

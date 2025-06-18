@@ -1,0 +1,44 @@
+openapi: 3.0.0
+info:
+  title: API Craft Docs
+  version: 1.0.0
+  description: Interactive Swagger UI for API-Craft Framework
+
+servers:
+  - url: http://localhost:3000/api
+    description: Development Server
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+paths:
+  /users:
+    get:
+      summary: Get all users
+      tags:
+        - Users
+      responses:
+        '200':
+          description: A list of users
+        '401':
+          description: Unauthorized
+
+  /users/{id}:
+    get:
+      summary: Get user by ID
+      tags:
+        - Users
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: User details
+        '404':
+          description: Not found
