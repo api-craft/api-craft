@@ -7,8 +7,8 @@
     "api-craft": "./bin/api-craft.js"
   },
   "scripts": {
-    "test": "cross-env NODE_ENV=test jest",
-    "test:watch": "cross-env NODE_ENV=test jest --watch",
+    "test": "vitest .",
+    "lint": "eslint .",
     "dev": "nodemon server.js --ext js,yaml",
     "start": "node server.js"
   },
@@ -32,6 +32,8 @@
   "license": "MIT",
   "packageManager": "pnpm@10.12.1",
   "dependencies": {
+    "@api-craft/cache": "^1.0.1",
+    "@api-craft/crud-router": "^1.0.4",
     "bcrypt": "^6.0.0",
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
@@ -39,13 +41,14 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.15.2",
     "swagger-ui-express": "^5.0.1",
+    "vitest": "^3.2.4",
     "yamljs": "^0.3.0"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.27.2",
-    "babel-jest": "^30.0.0",
+    "@eslint/js": "^9.30.1",
     "cross-env": "^7.0.3",
-    "jest": "^30.0.0",
+    "eslint": "^9.30.1",
+    "globals": "^16.3.0",
     "nodemon": "^3.1.10",
     "supertest": "^7.1.1"
   },

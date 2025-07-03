@@ -5,7 +5,7 @@ export const getAllUsers = async (req, res) => {
     try {
         const users = await User.find({});
         res.status(200).json({ "success": "true", "users": users });
-    } catch (error) {
+    } catch {
         res.status(500).json({ "success": "false", "error": "Internal Server Error" });
     }
 };
@@ -21,7 +21,7 @@ export const getUser = async (req, res) => {
             return res.status(404).json({ "error": "User not found" });
         }
         res.status(200).json({ "success": "true", "user": user });
-    } catch (error) {
+    } catch {
         res.status(500).json({ "error": "Internal Server Error" });
     }
 }
@@ -36,7 +36,7 @@ export const addUser = async (req, res) => {
     try {
         await newUser.save();
         res.status(201).json({ "success": "true", data: newUser });
-    } catch (error) {
+    } catch {
         res.status(500).json({ "error": "Internal Server Error" });
     }
 };
@@ -54,7 +54,7 @@ export const updateUser = async (req, res) => {
         }
         res.status(200).json({ "success": "true", data: updatedUser });
         
-    }catch (error) {
+    }catch {
         res.status(500).json({ "error": "Internal Server Error" });
     }
 };
@@ -70,7 +70,7 @@ export const deleteUser = async (req, res) => {
             return res.status(404).json({ "error": "User not found" });
         }
         res.status(200).json({ "success": "true", data: deletedUser });
-    } catch (error) {
+    } catch {
         res.status(500).json({ "error": "Internal Server Error" });
     }
 };
